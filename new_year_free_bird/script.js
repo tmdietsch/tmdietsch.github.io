@@ -28,15 +28,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const milliseconds = now.getMilliseconds();
 
         // Check if it's midnight
-        if (hours === 22 && minutes === 40 && seconds === 5 && milliseconds < 100 && milliseconds > 0) {
-            // Show the video element
-            midnightVideo.classList.remove("hidden");
-            // Play the video
-            midnightVideo.play();
-            midnightVideo.currentTime += 240;
-            midnightVideo.muted = false;
-            // No longer need to check for midnight
-            clearInterval(midnightInterval);
-        }
+        // if (hours === 22 && minutes === 40 && seconds === 5 && milliseconds < 100 && milliseconds > 0) {
+        // Show the video element
+        midnightVideo.classList.remove("hidden");
+        // Play the video
+        midnightVideo.play();
+        midnightVideo.currentTime += 240;
+        midnightVideo.muted = false;
+        // No longer need to check for midnight
+        clearInterval(midnightInterval);
+        console.log("help");
+        // }
     }
 });
