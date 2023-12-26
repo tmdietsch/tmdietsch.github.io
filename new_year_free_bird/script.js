@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(updateClock, 333);
 
     // Check for midnight and show the video
-    // const midnightInterval = setInterval(checkMidnight, 10);
-    setTimeout(checkMidnight, 5000)
+    const midnightInterval = setInterval(checkMidnight, 10);
+    // setTimeout(checkMidnight, 5000)
 
     function updateClock() {
         const now = new Date();
@@ -28,15 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const milliseconds = now.getMilliseconds();
 
         // Check if it's midnight
-        // if (hours === 20 && minutes === 52 && seconds === 5 && milliseconds < 100 && milliseconds > 0) {
+        if (hours === 23 && minutes === 55 && seconds === 5 && milliseconds < 100 && milliseconds > 0) {
+            playVideo();
+        }
+    }
+
+    function playVideo() {
         // Show the video element
         midnightVideo.classList.remove("hidden");
         // Play the video
         midnightVideo.play();
-        midnightVideo.currentTime += 240;
         midnightVideo.muted = false;
         // No longer need to check for midnight
-        // clearInterval(midnightInterval);
-        // }
+        clearInterval(midnightInterval);
     }
+
+    document.getElementById("playVideoButton").addEventListener("click", playVideo);
 });
