@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const midnightVideo = document.getElementById("midnightVideo");
 
     // Update the clock every second
-    setInterval(updateClock, 333);
+    // setInterval(updateClock, 333);
+    setTimeout(updateClock, 5000);
 
     // Check for midnight and show the video
     const midnightInterval = setInterval(checkMidnight, 10);
