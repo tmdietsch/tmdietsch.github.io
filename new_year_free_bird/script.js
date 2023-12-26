@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update the clock every second
     // setInterval(updateClock, 333);
-    setTimeout(updateClock, 5000);
+    setTimeout(checkMidnight, 5000);
     console.log("AAAAAAAAAA")
 
     // Check for midnight and show the video
