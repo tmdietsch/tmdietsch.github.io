@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const milliseconds = now.getMilliseconds();
 
         // Check if it's midnight
-        if (hours === 22 && minutes === 40 && seconds === 5 && milliseconds < 100 && milliseconds > 0) {
+        if (true || (hours === 22 && minutes === 40 && seconds === 5 && milliseconds < 100 && milliseconds > 0)) {
             // Show the video element
             midnightVideo.classList.remove("hidden");
             // Play the video
@@ -37,10 +37,5 @@ document.addEventListener("DOMContentLoaded", function() {
             // No longer need to check for midnight
             clearInterval(midnightInterval);
         }
-    }
-
-    function unmuteVideo() {
-        midnightVideo.muted = false;
-        console.log('testing')
     }
 });
