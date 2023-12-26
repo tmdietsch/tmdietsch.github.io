@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update the clock every second
     // setInterval(updateClock, 333);
     setTimeout(updateClock, 5000);
+    console.log("AAAAAAAAAA")
 
     // Check for midnight and show the video
     const midnightInterval = setInterval(checkMidnight, 10);
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function checkMidnight() {
+        console.log("BBBBBBBBBBBBBBBB")
         const now = new Date();
         const hours = now.getHours();
         const minutes = now.getMinutes();
